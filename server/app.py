@@ -4,9 +4,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-if __name__ == '__main__':
-    app.run(port=5555, debug=True)
-
 @app.route("/")
 def index():
     return '<h1>Python Operations with Flask Routing and Views</h1>'
@@ -37,3 +34,5 @@ def math(num1,operation,num2):
         result = num1 % num2
         
     return f'{result}'
+if __name__ == '__main__':
+    app.run(port=5555, debug=True)
