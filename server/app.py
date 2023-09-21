@@ -16,7 +16,7 @@ def print_string(parameter):
     print (f"parameter")
     return f"{parameter}"
 
-@app.route("/count/<integer:parameter>")
+@app.route("/count/<int:parameter>")
 def count(parameter):
-    return int(parameter)
+    int(parameter)
 
