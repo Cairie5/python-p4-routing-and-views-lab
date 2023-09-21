@@ -10,7 +10,7 @@ def index():
 
 @app.route("/print/<string:parameter>")
 def print_string(parameter):
-    print (f"parameter")
+    print (f"{parameter}")
     return f"{parameter}"
 
 @app.route("/count/<int:parameter>")
@@ -18,7 +18,7 @@ def count(parameter):
     num = '\n'.join(str(i) for i in range (parameter))
     return f"{num}\n"
 
-@app.route("/math/<init:num1>/<operation>/<int:num2>")
+@app.route("/math/<int:num1>/<operation>/<int:num2>")
 def math(num1,operation,num2):
     result = None
     
